@@ -1,0 +1,12 @@
+body {
+    background-color:#10ac84;
+}
+main {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.centered-form {
+    background-color:#1dd1a1;
+    display: block;
+}

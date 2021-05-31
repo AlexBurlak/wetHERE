@@ -1,18 +1,27 @@
-@model TModel
+@model OpenWeatherAPI.Query
 
 @{
     Layout = null;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
+<div class=container>
+    <div class="row">
+        <div class="col-12">
+            Today: @DateTime.Now.ToString()
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="col-12">Minimal temperature:</div>
+            <div class="col-12">@Model.Main.Temperature.CelsiusMinimum.ToString()</div>
+        </div>
+        <div class="col-4">
+            <div class="col-12">Current temperature:</div>
+            <div class="col-12">@Model.Main.Temperature.CelsiusCurrent.ToString()</div>
+        </div>
+        <div class="col-4">
+            <div class="col-12">Maximum temperature:</div>
+            <div class="col-12">@Model.Main.Temperature.CelsiusMaximum.ToString()</div>
+        </div>
+    </div>
 </div>
-</body>
-</html>
