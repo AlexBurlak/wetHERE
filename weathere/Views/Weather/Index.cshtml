@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Get weather";
+}
+<style>
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centered-form {
+    
+    display: block;
+}
+</style>
+<div class="text-center centered-form">
+    <form asp-controller="Weather" asp-action="GetWeather" method="post">
+        <input name="location" type="text" placeholder="Search..."/>
+        <input type="submit" value="Get weather"/>
+    </form>
+</div>
